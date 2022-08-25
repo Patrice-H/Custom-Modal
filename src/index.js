@@ -1,6 +1,27 @@
 import React from 'react'
-import styles from './styles.module.css'
+import closeModalBtn from 'assets/close-btn.png'
 
-export const ExampleComponent = ({ text }) => {
-  return <div className={styles.test}>Example Component: {text}</div>
+const hideModal = () => {
+  const modal = document.getElementById('modal')
+  modal.classList.add('hidden')
+  window.location.reload()
 }
+
+const Modal = () => {
+  return (
+    <div id='modal' data-testid='modal' className='hidden'>
+      <div id='confirmation'>
+        <p>Employee Created!</p>
+        <span
+          id='close-modal-btn'
+          data-testid='close-modal-btn'
+          onClick={hideModal}
+        >
+          <img src={closeModalBtn} alt='Close Modal' />
+        </span>
+      </div>
+    </div>
+  )
+}
+
+export default Modal
