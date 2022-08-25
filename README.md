@@ -25,6 +25,15 @@ class Example extends Component {
 }
 ```
 
+## Notes
+
+The display of the modal can be achieved using an event listener, by incorporating the following code:
+
+```Js
+const modal = document.getElementById('modal');
+modal.classList.remove('hidden');
+```
+
 ## License
 
 MIT © [Patrice-H](https://github.com/Patrice-H)
