@@ -2,29 +2,24 @@ import React from 'react'
 import closeModalBtn from 'assets/close-btn.png'
 
 /**
- * Function that closes the modal by adding the class "hidden" and reloads the page
- */
-const hideModal = () => {
-  const modal = document.getElementById('modal')
-  modal.classList.add('hidden')
-  window.location.reload()
-}
-
-/**
  * Customized modal component
  *
  * @component
  * @returns {JSX} The component
  */
-const Modal = () => {
+const Modal = (props) => {
   return (
-    <div id='modal' data-testid='modal' className='hidden'>
-      <div id='confirmation'>
-        <p>Employee Created!</p>
+    <div
+      id='modal-container'
+      data-testid='modal'
+      className={props.isOpen ? null : 'hidden-modal'}
+    >
+      <div id='modal-content'>
+        <div id='modal-text'>{props.text}</div>
         <span
           id='close-modal-btn'
           data-testid='close-modal-btn'
-          onClick={hideModal}
+          onClick={props.hideModal}
         >
           <img src={closeModalBtn} alt='Close Modal' />
         </span>
