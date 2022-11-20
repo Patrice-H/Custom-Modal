@@ -1,10 +1,10 @@
 {
   "name": "@patrice-h/custom-modal",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Customized modal for OpenClassrooms project",
   "author": "Patrice-H",
   "license": "MIT",
-  "repository": "",
+  "repository": "https://github.com/Patrice-H/Custom-Modal",
   "main": "dist/index.js",
   "module": "dist/index.modern.js",
   "source": "src/index.js",
